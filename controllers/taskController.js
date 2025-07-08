@@ -9,7 +9,7 @@ export const createTask = (req, res) => {
   try {
     const task = req.body;
     validateTask(task);
-    task.completed = false; // default
+    task.completed = false;
     model.addTask(task);
     res.status(201).json(task);
   } catch (err) {
